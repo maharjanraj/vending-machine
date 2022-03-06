@@ -78,7 +78,11 @@ function App() {
         </div>
         <div className='col'>
           <div className='border border-2 rounded p-3'>
-            <Balance title='Wallet' coins={wallet.coins} cash={wallet.cash} />
+            <Balance
+              title='Your Wallet'
+              coins={wallet.coins}
+              cash={wallet.cash}
+            />
           </div>
         </div>
         <div className='col'>
