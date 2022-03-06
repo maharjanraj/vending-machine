@@ -58,7 +58,7 @@ function App() {
   const checkout = async () => {
     const returns = await Request.get('/checkout');
     window.alert(
-      `Please take your cash and coins: ${returns.cash} cash & ${returns.coins} coins`
+      `Please collect your items & changes: ${returns.cash} cash & ${returns.coins} coins`
     );
     fetchVendingMachineStates();
   };

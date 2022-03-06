@@ -2,7 +2,7 @@ import WalletService from '../services/wallet.service';
 
 describe('wallet service', () => {
   describe('getWalletInfo', () => {
-    let walletService = new WalletService();
+    const walletService = new WalletService();
 
     test('should update wallet cash and coins', () => {
       walletService.addCash(10);

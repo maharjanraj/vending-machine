@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  backend:
+    container_name: vm-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 8080:8080
+
+  webapp:
+    container_name: vm-webapp
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
+    volumes:
+      - './webapp:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
